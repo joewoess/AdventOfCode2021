@@ -12,7 +12,7 @@ All implemented solutions will be linked in the [Challenges table](##Challenges)
 | Day | Challenge | C# | F# | Java | Kotlin | Rust | Python |
 | ---: |:---------| :-------:| :-------:| :-------:| :-------:| :-------:| :-------:|
 |  1  | [Sonar Sweep](https://adventofcode.com/2021/day/1) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day01.cs)
-|  2  | [Challenge 02](https://adventofcode.com/2021/day/2) | 
+|  2  | [Dive!](https://adventofcode.com/2021/day/2) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day02.cs)
 |  3  | [Challenge 03](https://adventofcode.com/2021/day/3) | 
 |  4  | [Challenge 04](https://adventofcode.com/2021/day/4) | 
 |  5  | [Challenge 05](https://adventofcode.com/2021/day/5) | 
