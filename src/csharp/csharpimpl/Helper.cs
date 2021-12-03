@@ -19,6 +19,7 @@ Challenge at: https://adventofcode.com/2021/
 Author: Johannes Wöß
 Written in C# 10 / .NET 6";
 
+    /** Prints a message only if the static variable IsDebug is set */
     public static void DebugMsg(string message)
     {
         if (IsDebug) Console.WriteLine(message);
@@ -51,10 +52,17 @@ Written in C# 10 / .NET 6";
     {
         return Assembly.GetExecutingAssembly().GetTypes()
             .Where(t => string.Equals(t.Namespace, ImplementationNamespace, StringComparison.Ordinal))
-            .Where(t => !t.Name.Contains('<'))
+            .Where(t => !t.Name.Contains('<') && t.Name.StartsWith("Day"))
             .OrderBy(t => t.Name);
     }
 
+    /** Convert a string of 0s and 1s to a int number */
+    public static int BitsToInt(this string stat)
+    {
+        return Convert.ToInt32(stat, 2);
+    }
+
+    // Private methods
 
     /** Prints a separator line spanning the console width */
     private static void PrintSeparator()

@@ -2,18 +2,18 @@
 
 My solutions to the coding challenge [adventofcode](https://adventofcode.com/2021) written in different kind of languages :)
 
-Code automatically takes input files day01.txt, day02.txt, etc. 
+Code automatically takes input files day01.txt, day02.txt, etc
 All implemented solutions will be linked in the [Challenges table](##Challenges)  with their respective languages.
 
 ---
 
-## Challenges: 
+## Challenges
 
 | Day | Challenge | C# | F# | Java | Kotlin | Rust | Python |
 | ---: |:---------| :-------:| :-------:| :-------:| :-------:| :-------:| :-------:|
 |  1  | [Sonar Sweep](https://adventofcode.com/2021/day/1) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day01.cs)
 |  2  | [Dive!](https://adventofcode.com/2021/day/2) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day02.cs)
-|  3  | [Challenge 03](https://adventofcode.com/2021/day/3) | 
+|  3  | [Binary Diagnostic](https://adventofcode.com/2021/day/3) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day03.cs)
 |  4  | [Challenge 04](https://adventofcode.com/2021/day/4) | 
 |  5  | [Challenge 05](https://adventofcode.com/2021/day/5) | 
 |  6  | [Challenge 06](https://adventofcode.com/2021/day/6) | 
@@ -39,7 +39,6 @@ All implemented solutions will be linked in the [Challenges table](##Challenges)
 
 ---
 
-
 ## Usage
 
 Depending on the language version, all that is need is to go into the respective folder and
@@ -56,9 +55,8 @@ cargo run -- 01
 python3 main.py 01
 ```
 
+## Languages used in this challenge
 
-
-## Languages used in this challenge:
 * C# 10
 * Kotlin 1.6.0
 * Rust 1.56.1
@@ -66,7 +64,7 @@ python3 main.py 01
 * Python 3.10
 * ...
 
-## Sample output:
+## Sample output
 
 ```log
 ------------------------------------------------------------------------------
@@ -79,4 +77,3 @@ Written in C# 10 / .NET 6
 | Day01 |        1624 |        1653 |
 Could not find solution for day Day02
 ```
-
