@@ -2,6 +2,15 @@
 # Created by https://www.toptal.com/developers/gitignore/api/jetbrains+all,rider,visualstudio,visualstudiocode,csharp,rust,kotlin,gradle,windows,linux,powershell,node,tortoisegit,git,unity,unrealengine,macos,maven,monodevelop,matlab,python,jupyternotebooks,fsharp,c++,react,dotnetcore,android,vue,vuejs,java,angular
 # Edit at https://www.toptal.com/developers/gitignore?templates=jetbrains+all,rider,visualstudio,visualstudiocode,csharp,rust,kotlin,gradle,windows,linux,powershell,node,tortoisegit,git,unity,unrealengine,macos,maven,monodevelop,matlab,python,jupyternotebooks,fsharp,c++,react,dotnetcore,android,vue,vuejs,java,angular
 
+
+
+### Custom additions ###
+**/.dump
+
+
+
+
+
 ### Android ###
 # Built application files
 *.apk

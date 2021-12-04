@@ -9,33 +9,33 @@ All implemented solutions will be linked in the [Challenges table](##Challenges)
 
 ## Challenges
 
-| Day | Challenge | C# | F# | Java | Kotlin | Rust | Python |
-| ---: |:---------| :-------:| :-------:| :-------:| :-------:| :-------:| :-------:|
-|  1  | [Sonar Sweep](https://adventofcode.com/2021/day/1) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day01.cs)
-|  2  | [Dive!](https://adventofcode.com/2021/day/2) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day02.cs)
-|  3  | [Binary Diagnostic](https://adventofcode.com/2021/day/3) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day03.cs)
-|  4  | [Giant Squid](https://adventofcode.com/2021/day/4) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day04.cs)
-|  5  | [Challenge 05](https://adventofcode.com/2021/day/5) | 
-|  6  | [Challenge 06](https://adventofcode.com/2021/day/6) | 
-|  7  | [Challenge 07](https://adventofcode.com/2021/day/7) | 
-|  8  | [Challenge 08](https://adventofcode.com/2021/day/8) | 
-|  9  | [Challenge 09](https://adventofcode.com/2021/day/9) | 
-| 10  | [Challenge 10](https://adventofcode.com/2021/day/10) | 
-| 11  | [Challenge 11](https://adventofcode.com/2021/day/11) | 
-| 12  | [Challenge 12](https://adventofcode.com/2021/day/12) | 
-| 13  | [Challenge 13](https://adventofcode.com/2021/day/13) | 
-| 14  | [Challenge 14](https://adventofcode.com/2021/day/14) | 
-| 15  | [Challenge 15](https://adventofcode.com/2021/day/15) | 
-| 16  | [Challenge 16](https://adventofcode.com/2021/day/16) | 
-| 17  | [Challenge 17](https://adventofcode.com/2021/day/17) | 
-| 18  | [Challenge 18](https://adventofcode.com/2021/day/18) | 
-| 19  | [Challenge 19](https://adventofcode.com/2021/day/19) | 
-| 20  | [Challenge 20](https://adventofcode.com/2021/day/20) | 
-| 21  | [Challenge 21](https://adventofcode.com/2021/day/21) | 
-| 22  | [Challenge 22](https://adventofcode.com/2021/day/22) | 
-| 23  | [Challenge 23](https://adventofcode.com/2021/day/23) | 
-| 24  | [Challenge 24](https://adventofcode.com/2021/day/24) | 
-| 25  | [Challenge 25](https://adventofcode.com/2021/day/25) | 
+| Day | Challenge | C# | F# | Kotlin | Rust | Python |
+| ---: |:---------| :-------:| :-------:| :-------:| :-------:| :-------:|
+|  1  | [Sonar Sweep](https://adventofcode.com/2021/day/1) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day01.cs) | FSharp | [Kotlin](src/kotlin/app/adventofcode/impl/Day01.kt) | Rust | Python
+|  2  | [Dive!](https://adventofcode.com/2021/day/2) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day02.cs) | FSharp | [Kotlin](src/kotlin/app/adventofcode/impl/Day02.kt) | Rust | Python
+|  3  | [Binary Diagnostic](https://adventofcode.com/2021/day/3) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day03.cs) | FSharp | [Kotlin](src/kotlin/app/adventofcode/impl/Day03.kt) | Rust | Python
+|  4  | [Giant Squid](https://adventofcode.com/2021/day/4) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day04.cs) | FSharp | Kotlin | Rust | Python
+|  5  | [Challenge 05](https://adventofcode.com/2021/day/5) | Csharp | FSharp | Kotlin | Rust | Python
+|  6  | [Challenge 06](https://adventofcode.com/2021/day/6) | Csharp | FSharp | Kotlin | Rust | Python
+|  7  | [Challenge 07](https://adventofcode.com/2021/day/7) | Csharp | FSharp | Kotlin | Rust | Python
+|  8  | [Challenge 08](https://adventofcode.com/2021/day/8) | Csharp | FSharp | Kotlin | Rust | Python
+|  9  | [Challenge 09](https://adventofcode.com/2021/day/9) | Csharp | FSharp | Kotlin | Rust | Python
+| 10  | [Challenge 10](https://adventofcode.com/2021/day/10) | Csharp | FSharp | Kotlin | Rust | Python
+| 11  | [Challenge 11](https://adventofcode.com/2021/day/11) | Csharp | FSharp | Kotlin | Rust | Python
+| 12  | [Challenge 12](https://adventofcode.com/2021/day/12) | Csharp | FSharp | Kotlin | Rust | Python
+| 13  | [Challenge 13](https://adventofcode.com/2021/day/13) | Csharp | FSharp | Kotlin | Rust | Python
+| 14  | [Challenge 14](https://adventofcode.com/2021/day/14) | Csharp | FSharp | Kotlin | Rust | Python
+| 15  | [Challenge 15](https://adventofcode.com/2021/day/15) | Csharp | FSharp | Kotlin | Rust | Python
+| 16  | [Challenge 16](https://adventofcode.com/2021/day/16) | Csharp | FSharp | Kotlin | Rust | Python
+| 17  | [Challenge 17](https://adventofcode.com/2021/day/17) | Csharp | FSharp | Kotlin | Rust | Python
+| 18  | [Challenge 18](https://adventofcode.com/2021/day/18) | Csharp | FSharp | Kotlin | Rust | Python
+| 19  | [Challenge 19](https://adventofcode.com/2021/day/19) | Csharp | FSharp | Kotlin | Rust | Python
+| 20  | [Challenge 20](https://adventofcode.com/2021/day/20) | Csharp | FSharp | Kotlin | Rust | Python
+| 21  | [Challenge 21](https://adventofcode.com/2021/day/21) | Csharp | FSharp | Kotlin | Rust | Python
+| 22  | [Challenge 22](https://adventofcode.com/2021/day/22) | Csharp | FSharp | Kotlin | Rust | Python
+| 23  | [Challenge 23](https://adventofcode.com/2021/day/23) | Csharp | FSharp | Kotlin | Rust | Python
+| 24  | [Challenge 24](https://adventofcode.com/2021/day/24) | Csharp | FSharp | Kotlin | Rust | Python
+| 25  | [Challenge 25](https://adventofcode.com/2021/day/25) | Csharp | FSharp | Kotlin | Rust | Python
 
 ---
 
