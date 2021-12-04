@@ -14,7 +14,7 @@ All implemented solutions will be linked in the [Challenges table](##Challenges)
 |  1  | [Sonar Sweep](https://adventofcode.com/2021/day/1) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day01.cs)
 |  2  | [Dive!](https://adventofcode.com/2021/day/2) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day02.cs)
 |  3  | [Binary Diagnostic](https://adventofcode.com/2021/day/3) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day03.cs)
-|  4  | [Challenge 04](https://adventofcode.com/2021/day/4) | 
+|  4  | [Giant Squid](https://adventofcode.com/2021/day/4) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day04.cs)
 |  5  | [Challenge 05](https://adventofcode.com/2021/day/5) | 
 |  6  | [Challenge 06](https://adventofcode.com/2021/day/6) | 
 |  7  | [Challenge 07](https://adventofcode.com/2021/day/7) | 
