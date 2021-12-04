@@ -12,7 +12,7 @@ group = "com.joewoess"
 version = "1.0.0"
 description = "adventofcode 2021 implementation"
 
-java.sourceCompatibility = JavaVersion.VERSION_17
+java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     // Use JCenter for resolving dependencies.
@@ -42,6 +42,6 @@ sourceSets.main {
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = "17"
+        jvmTarget = "11"
     }
 }
