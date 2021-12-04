@@ -7,8 +7,8 @@ public static class Helper
     public static bool IsDebug = false;
     public static bool IsTest = false;
 
-    private const string InputPath = "../../../input/";
-    private const string TestInputPath = "../../../testInput/";
+    private const string InputPath = "../../input/";
+    private const string TestInputPath = "../../testInput/";
 
     private const string NoSolutionMessage = "NONE";
     private const char SeparatorChar = '-';
