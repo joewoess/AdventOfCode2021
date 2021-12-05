@@ -1,7 +1,7 @@
 using System.Text;
 using static csharp.Helper;
 
-namespace csharp.puzzleImpl;
+namespace csharp.impl;
 
 public class Day03 : IPuzzle
 {

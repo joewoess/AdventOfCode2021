@@ -1,6 +1,6 @@
 ﻿using static csharp.Helper;
 
-namespace csharp.puzzleImpl;
+namespace csharp.impl;
 
 public class Day02 : IPuzzle
 {

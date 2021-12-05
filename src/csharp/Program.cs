@@ -9,13 +9,13 @@ var implementations = GetImplementedTypesFromNamespace();
 if (args.Contains("--last"))
 {
     DebugMsg("Only show last entry (cmd arg --last)");
-    PrintDay(implementations.Last());
+    PrintSolutionMessage(implementations.Last());
 }
 else if (args.Length > 0 && int.TryParse(args[0], out var newNum) && newNum is > 0 and <= 25)
 {
     var typeFromNumber = implementations.ElementAtOrDefault(newNum - 1);
     DebugMsg($"Only show entry {newNum} (cmd arg NUMBER)");
-    if (typeFromNumber is not null) PrintDay(typeFromNumber);
+    if (typeFromNumber is not null) PrintSolutionMessage(typeFromNumber);
 }
 else
 {
@@ -25,7 +25,7 @@ else
         DebugMsg(targetType.Name);
         try
         {
-            PrintDay(targetType);
+            PrintSolutionMessage(targetType);
         }
         catch (Exception e)
         {
