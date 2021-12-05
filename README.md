@@ -15,7 +15,7 @@ All implemented solutions will be linked in the [Challenges table](##Challenges)
 |  2  | [Dive!](https://adventofcode.com/2021/day/2) | [Csharp](src/csharp/impl/Day02.cs) | FSharp | [Kotlin](src/kotlin/app/adventofcode/impl/Day02.kt) | Rust | Python
 |  3  | [Binary Diagnostic](https://adventofcode.com/2021/day/3) | [Csharp](src/csharp/impl/Day03.cs) | FSharp | [Kotlin](src/kotlin/app/adventofcode/impl/Day03.kt) | Rust | Python
 |  4  | [Giant Squid](https://adventofcode.com/2021/day/4) | [Csharp](src/csharp/impl/Day04.cs) | FSharp | Kotlin | Rust | Python
-|  5  | [Challenge 05](https://adventofcode.com/2021/day/5) | Csharp | FSharp | Kotlin | Rust | Python
+|  5  | [Hydrothermal Venture](https://adventofcode.com/2021/day/5) | [Csharp](src/csharp/impl/Day05.cs) | FSharp | Kotlin | Rust | Python
 |  6  | [Challenge 06](https://adventofcode.com/2021/day/6) | Csharp | FSharp | Kotlin | Rust | Python
 |  7  | [Challenge 07](https://adventofcode.com/2021/day/7) | Csharp | FSharp | Kotlin | Rust | Python
 |  8  | [Challenge 08](https://adventofcode.com/2021/day/8) | Csharp | FSharp | Kotlin | Rust | Python
