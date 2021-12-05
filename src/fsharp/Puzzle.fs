@@ -1,16 +1,30 @@
 ﻿namespace fsharp.puzzle
 
+open System
 open System.IO
+open fsharp.helper.debug
+
 
 [<AbstractClass>]
-type public Puzzle(filename: string) =
-    member private this.input =
+type public Puzzle() =
+    member private this.input filename =
         lazy (File.ReadAllLines(filename) |> List.ofArray)
 
-    member this.inputLines =
-        (match this.input.IsValueCreated with
-         | true -> this.input.Value
-         | false -> this.input.Force())
+    member this.inputLines isDebug inputPath =
+        (try
+            Some(
+                (match (this.input inputPath).IsValueCreated with
+                 | true -> (this.input inputPath).Value
+                 | false -> (this.input inputPath).Force())
+            )
+         with
+         | :? FileNotFoundException as exc ->
+             DebugMsg isDebug $"File not found: {exc.Message}"
+             None
+         | :? UnauthorizedAccessException as exc ->
+             DebugMsg isDebug $"Could not open: {exc.Message}"
+             None)
 
-    abstract member SolveFirst : Option<string>
-    abstract member SolveSecond : Option<string>
+
+    abstract member SolveFirst : Boolean * String -> Option<string>
+    abstract member SolveSecond : Boolean * String -> Option<string>

@@ -2,11 +2,9 @@
 
 open fsharp.puzzle
 
-type Day02(filename: string) =
-    inherit Puzzle(filename: string)
+type Day02() =
+    inherit Puzzle()
 
-    override this.SolveFirst =
-        Option.None  
+    override this.SolveFirst(isDebug, inputPath) = Option.None
 
-    override this.SolveSecond =
-        Option.None
+    override this.SolveSecond(isTest, inputPath) = Option.None

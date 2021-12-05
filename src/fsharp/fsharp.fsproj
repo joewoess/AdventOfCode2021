@@ -6,8 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="helper\Literals.fs" />
+    <Compile Include="helper\Debug.fs" />
     <Compile Include="Puzzle.fs" />
-    <Compile Include="Helper.fs" />
+    <Compile Include="helper\Records.fs" />
+    <Compile Include="helper\Util.fs" />
+    <Compile Include="helper\Printing.fs" />
+    <Compile Include="helper\Reflection.fs" />
     <Compile Include="impl\Day01.fs" />
     <Compile Include="impl\Day02.fs" />
     <!-- Needs to be last -->
