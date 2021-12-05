@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Puzzle.fs" />
+    <Compile Include="Helper.fs" />
+    <Compile Include="impl\Day01.fs" />
+    <Compile Include="impl\Day02.fs" />
+    <!-- Needs to be last -->
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+</Project>
