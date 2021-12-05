@@ -42,17 +42,29 @@ All implemented solutions will be linked in the [Challenges table](##Challenges)
 ## Usage
 
 Depending on the language version, all that is need is to go into the respective folder and
-use their common build tool to run it. **Optionally** you can specify a specific day.
+use their common build tool to run it.
 
+```
+# these are the valid optional parameters for all implementations (can be freely combined)
+ --test      ... Use test input instead of puzzle input
+ --debug     ... Show debug output
+ --last      ... Show last challenge commited
+ 01 4 20     ... Number list specifying certain days to output 
+```
 ```zsh
-# using gradle for kotlin and java
+# using gradle for kotlin
+# or for the included gradle wrapper use gradlew (or ./gradlew on windows)
 gradle run --args='01'
+gradlew run --args='01'
+
 # using dotnet for c# and f#
-dotnet run -- 01 
+dotnet run -- --test
+
 # using python3 for rust
 cargo run -- 01
+
 # using python3 for python
-python3 main.py 01
+python3 main.py --debug
 ```
 
 ## Languages used in this challenge
@@ -63,6 +75,32 @@ python3 main.py 01
 * F# 6
 * Python 3.10
 * ...
+
+## Folder structure 
+
+```
++---input
+|   - day01.txt
+|   - day02.txt
+|   - ...
++---src
+|   +---csharp
+|   |   - csharp.csproj
+|   +---fsharp
+|   |   - fsharp.fsproj
+|   +---kotlin
+|   |   - settings.gradle.kts
+|   |   +---app
+|   |   |   +---adventofcode
+|   +---python
+|   +---rust
++---testInput
+|   - day01.txt
+|   - day02.txt
+|   - ...
+- README.md
+```
+
 
 ## Sample output
 
