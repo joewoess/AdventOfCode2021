@@ -11,10 +11,10 @@ All implemented solutions will be linked in the [Challenges table](##Challenges)
 
 | Day | Challenge | C# | F# | Kotlin | Rust | Python |
 | ---: |:---------| :-------:| :-------:| :-------:| :-------:| :-------:|
-|  1  | [Sonar Sweep](https://adventofcode.com/2021/day/1) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day01.cs) | [FSharp](src/fSharp/impl/Day01.fs) | [Kotlin](src/kotlin/app/adventofcode/impl/Day01.kt) | Rust | Python
-|  2  | [Dive!](https://adventofcode.com/2021/day/2) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day02.cs) | FSharp | [Kotlin](src/kotlin/app/adventofcode/impl/Day02.kt) | Rust | Python
-|  3  | [Binary Diagnostic](https://adventofcode.com/2021/day/3) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day03.cs) | FSharp | [Kotlin](src/kotlin/app/adventofcode/impl/Day03.kt) | Rust | Python
-|  4  | [Giant Squid](https://adventofcode.com/2021/day/4) | [Csharp](src/csharp/csharpimpl/puzzleImpl/Day04.cs) | FSharp | Kotlin | Rust | Python
+|  1  | [Sonar Sweep](https://adventofcode.com/2021/day/1) | [Csharp](src/csharp/impl/Day01.cs) | [FSharp](src/fsharp/impl/Day01.fs) | [Kotlin](src/kotlin/app/adventofcode/impl/Day01.kt) | Rust | Python
+|  2  | [Dive!](https://adventofcode.com/2021/day/2) | [Csharp](src/csharp/impl/Day02.cs) | FSharp | [Kotlin](src/kotlin/app/adventofcode/impl/Day02.kt) | Rust | Python
+|  3  | [Binary Diagnostic](https://adventofcode.com/2021/day/3) | [Csharp](src/csharp/impl/Day03.cs) | FSharp | [Kotlin](src/kotlin/app/adventofcode/impl/Day03.kt) | Rust | Python
+|  4  | [Giant Squid](https://adventofcode.com/2021/day/4) | [Csharp](src/csharp/impl/Day04.cs) | FSharp | Kotlin | Rust | Python
 |  5  | [Challenge 05](https://adventofcode.com/2021/day/5) | Csharp | FSharp | Kotlin | Rust | Python
 |  6  | [Challenge 06](https://adventofcode.com/2021/day/6) | Csharp | FSharp | Kotlin | Rust | Python
 |  7  | [Challenge 07](https://adventofcode.com/2021/day/7) | Csharp | FSharp | Kotlin | Rust | Python
