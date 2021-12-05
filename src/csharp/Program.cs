@@ -1,4 +1,4 @@
-﻿using static csharpimpl.Helper;
+﻿using static csharp.Helper;
 
 PrintGreeting();
 IsTest = args.Contains("--test");

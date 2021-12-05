@@ -1,4 +1,4 @@
-﻿namespace csharpimpl;
+﻿namespace csharp;
 
 public interface IPuzzle
 {

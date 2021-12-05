@@ -1,7 +1,7 @@
 using System.Text;
-using static csharpimpl.Helper;
+using static csharp.Helper;
 
-namespace csharpimpl.puzzleImpl;
+namespace csharp.puzzleImpl;
 
 public class Day05 : IPuzzle
 {
@@ -11,7 +11,6 @@ public class Day05 : IPuzzle
     {
         _input = File.ReadAllLines(filename);
     }
-
 
     public string? FirstPuzzle() => null;
     public string? SecondPuzzle() => null;

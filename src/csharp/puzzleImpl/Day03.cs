@@ -1,7 +1,7 @@
 using System.Text;
-using static csharpimpl.Helper;
+using static csharp.Helper;
 
-namespace csharpimpl.puzzleImpl;
+namespace csharp.puzzleImpl;
 
 public class Day03 : IPuzzle
 {
@@ -62,19 +62,16 @@ public class Day03 : IPuzzle
 
         for (int bitIdx = 0; bitIdx < commonLength; bitIdx++)
         {
-
-            if (remainingOxygenGenerator.Count <= 1 && remainingLifeSupport.Count <= 1)
-            {
-                break;
-            }
             if (remainingOxygenGenerator.Count > 1)
             {
                 var countsOG = CountBits(remainingOxygenGenerator, bitIdx);
                 DebugMsg($"Therer are {countsOG.ones} 1s and {countsOG.zeros} 0s remaining in oxygen");
 
                 var criteria = BoolToChar(countsOG.ones >= countsOG.zeros);
-                remainingOxygenGenerator = remainingOxygenGenerator.Where(stat => stat.StatBits[bitIdx] == criteria).ToList();
+                remainingOxygenGenerator =
+                    remainingOxygenGenerator.Where(stat => stat.StatBits[bitIdx] == criteria).ToList();
             }
+
             if (remainingLifeSupport.Count > 1)
             {
                 var countsLS = CountBits(remainingLifeSupport, bitIdx);
@@ -100,13 +97,13 @@ public class Day03 : IPuzzle
         return (oxygenGeneratorRating.AsNumber * lifeSupportRating.AsNumber).ToString();
     }
 
-    private (int ones, int zeros) CountBits(List<DiagnosticStat> remaining, int bitIdx)
+    private static (int ones, int zeros) CountBits(IReadOnlyCollection<DiagnosticStat> remaining, int bitIdx)
     {
-        var remainingOnes = remaining.Where(stat => stat.StatBits[bitIdx] == '1').Count();
+        var remainingOnes = remaining.Count(stat => stat.StatBits[bitIdx] == '1');
         return (remainingOnes, remaining.Count - remainingOnes);
     }
 
-    private char BoolToChar(bool condition) => condition ? '1' : '0';
+    private static char BoolToChar(bool condition) => condition ? '1' : '0';
 
-    public readonly record struct DiagnosticStat(string StatBits, int NumBits, int AsNumber);
+    private readonly record struct DiagnosticStat(string StatBits, int NumBits, int AsNumber);
 }

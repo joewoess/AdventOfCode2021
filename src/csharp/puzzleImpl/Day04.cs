@@ -1,7 +1,7 @@
 using System.Text;
-using static csharpimpl.Helper;
+using static csharp.Helper;
 
-namespace csharpimpl.puzzleImpl;
+namespace csharp.puzzleImpl;
 
 public class Day04 : IPuzzle
 {
@@ -15,7 +15,7 @@ public class Day04 : IPuzzle
     public string? FirstPuzzle()
     {
         var drawNumbers = _input.FirstOrDefault()?.Split(",").Select(int.Parse).ToList() ?? new List<int>();
-        DebugMsg($"Drawnumbers are: { string.Join(",", drawNumbers) }");
+        DebugMsg($"Draw numbers are: {string.Join(",", drawNumbers)}");
 
         var boards = _input
             .Skip(1)
@@ -33,8 +33,9 @@ public class Day04 : IPuzzle
                 board.MarkIfThere(num);
                 if (board.IsFinished)
                 {
-                    var finishingLine = board.FinishingLine ?? new MarkableNumber[0];
-                    DebugMsg($"Finished at #{num} with sum {board.SumOfUnmarked()} line { string.Join(",", finishingLine) }");
+                    var finishingLine = board.FinishingLine ?? Array.Empty<MarkableNumber>();
+                    DebugMsg(
+                        $"Finished at #{num} with sum {board.SumOfUnmarked()} line {string.Join(",", finishingLine)}");
                     return (board.SumOfUnmarked() * num).ToString();
                 }
             }
@@ -46,7 +47,7 @@ public class Day04 : IPuzzle
     public string? SecondPuzzle()
     {
         var drawNumbers = _input.FirstOrDefault()?.Split(",").Select(int.Parse).ToList() ?? new List<int>();
-        DebugMsg($"Drawnumbers are: { string.Join(",", drawNumbers) }");
+        DebugMsg($"Draw numbers are: {string.Join(",", drawNumbers)}");
 
         var boards = _input
             .Skip(1)
@@ -64,8 +65,9 @@ public class Day04 : IPuzzle
                 board.MarkIfThere(num);
                 if (boards.Count(b => !b.IsFinished) == 0)
                 {
-                    var finishingLine = board.FinishingLine ?? new MarkableNumber[0];
-                    DebugMsg($"Finished at #{num} with sum {board.SumOfUnmarked()} line { string.Join(",", finishingLine) }");
+                    var finishingLine = board.FinishingLine ?? Array.Empty<MarkableNumber>();
+                    DebugMsg(
+                        $"Finished at #{num} with sum {board.SumOfUnmarked()} line {string.Join(",", finishingLine)}");
                     return (board.SumOfUnmarked() * num).ToString();
                 }
             }
@@ -81,7 +83,8 @@ public class Day04 : IPuzzle
             return $"{Number,2:##}";
         }
     }
-    public class Board
+
+    private class Board
     {
         public Board(string[] inputData)
         {
@@ -97,32 +100,29 @@ public class Day04 : IPuzzle
             }
         }
 
-        public MarkableNumber[][] BoardNumbers { get; set; }
+        private MarkableNumber[][] BoardNumbers { get; set; }
 
-        public void MarkIfThere(int Number)
+        public void MarkIfThere(int number)
         {
             foreach (var line in BoardNumbers)
             {
-                for (int i = 0; i < line.Length; i++)
+                for (var i = 0; i < line.Length; i++)
                 {
-                    if (line[i].Number == Number)
+                    if (line[i].Number != number) continue;
+                    line[i].Marked = true;
+                    if (line.All(markable => markable.Marked))
                     {
-                        line[i].Marked = true;
-                        if (line.All(markable => markable.Marked))
-                        {
-                            IsFinished = true;
-                            FinishingLine = line;
-                            return;
-                        }
-                        var vertical = BoardNumbers.Select(line => line[i]);
-                        if (vertical.All(markable => markable.Marked))
-                        {
-                            IsFinished = true;
-                            FinishingLine = vertical.ToArray();
-                            return;
-                        }
+                        IsFinished = true;
+                        FinishingLine = line;
                         return;
                     }
+
+                    var vertical = BoardNumbers.Select(l => l[i]).ToArray();
+                    if (!vertical.All(markable => markable.Marked)) return;
+                    
+                    IsFinished = true;
+                    FinishingLine = vertical.ToArray();
+                    return;
                 }
             }
         }

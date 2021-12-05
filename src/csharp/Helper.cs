@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace csharpimpl;
+namespace csharp;
 
 public static class Helper
 {
