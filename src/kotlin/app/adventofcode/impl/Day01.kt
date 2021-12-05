@@ -10,13 +10,9 @@ class Day01(filename: String) : Puzzle(filename) {
             .map { it.trim() }
             .map { it.toInt() }
 
-        var countIncreases = 0
-        for (i in 1 until numbers.size) {
-            if (numbers[i] > numbers[i - 1]) countIncreases++
-        }
-
-        Helper.debugMsg("There was ${countIncreases} out of total ${numbers.size} numbers.");
-        return "$countIncreases"
+        val increases = countIncreases(numbers)
+        Helper.debugMsg("There was $increases out of total ${numbers.size} numbers.");
+        return "$increases"
     }
 
     override fun solveSecond(): String? {
@@ -28,12 +24,12 @@ class Day01(filename: String) : Puzzle(filename) {
         val zipped = numbers.windowed(3)
         val summed = zipped.map { it.sum() }
 
-        var countIncreases = 0
-        for (i in 1 until summed.size) {
-            if (summed[i] > summed[i - 1]) countIncreases++
-        }
-
-        Helper.debugMsg("There was ${countIncreases} out of total ${summed.size} tuples.");
-        return "$countIncreases"
+        val increases = countIncreases(summed)
+        Helper.debugMsg("There was $increases out of total ${summed.size} tuples.");
+        return "$increases"
     }
+
+    private fun <T : Comparable<T>> countIncreases(collection: List<T>): Int = (1 until collection.size).sumOf { (collection[it] > collection[it - 1]).toInt() }
+
+    private fun Boolean.toInt() = if (this) 1 else 0
 }

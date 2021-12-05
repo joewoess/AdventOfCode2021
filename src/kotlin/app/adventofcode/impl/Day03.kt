@@ -41,15 +41,15 @@ class Day03(filename: String) : Puzzle(filename) {
         val remainingOxygenGenerator = diagnostics.toMutableList()
         val remainingLifeSupport = diagnostics.toMutableList()
 
-        for(bitIdx in 0 until commonLength) {
+        for (bitIdx in 0 until commonLength) {
             if (remainingOxygenGenerator.size > 1) {
                 val (ones, zeros) = countBits(remainingOxygenGenerator, bitIdx)
-                Helper.debugMsg("Therer are $ones 1s and $zeros 0s remaining in oxygen")
+                Helper.debugMsg("There are $ones 1s and $zeros 0s remaining in oxygen")
                 remainingOxygenGenerator -= { it.statBits[bitIdx] != (ones >= zeros).asChar() }
             }
             if (remainingLifeSupport.size > 1) {
                 val (ones, zeros) = countBits(remainingLifeSupport, bitIdx)
-                Helper.debugMsg("Therer are $ones 1s and $zeros 0s remaining in lifesupp")
+                Helper.debugMsg("There are $ones 1s and $zeros 0s remaining in lifeSupport")
                 remainingLifeSupport -= { it.statBits[bitIdx] != (ones < zeros).asChar() }
             }
         }
@@ -68,22 +68,23 @@ class Day03(filename: String) : Puzzle(filename) {
         return "${oxygenGeneratorRating.asNumber * lifeSupportRating.asNumber}"
     }
 
-    fun String.bitsToInt(): Int {
+    private fun String.bitsToInt(): Int {
         return this.toInt(2)
     }
 
-    fun countBits(remaining: List<DiagnosticStat>, bitIdx: Int): Pair<Int, Int> {
+    private fun countBits(remaining: List<DiagnosticStat>, bitIdx: Int): Pair<Int, Int> {
         val remainingOnes = remaining.filter { it.statBits[bitIdx] == '1' }.size
         return Pair(remainingOnes, remaining.size - remainingOnes)
     }
 
-    fun Boolean.asChar(): Char { 
-        return if (this) '1' else '0' 
+    private fun Boolean.asChar(): Char {
+        return if (this) '1' else '0'
     }
 
-    operator fun MutableList<DiagnosticStat>.minusAssign(filter: (DiagnosticStat) -> Boolean) { 
+    operator fun MutableList<DiagnosticStat>.minusAssign(filter: (DiagnosticStat) -> Boolean) {
         this.removeAll { filter(it) }
     }
+
+    data class DiagnosticStat(val statBits: String, val numBits: Int, val asNumber: Int)
 }
 
-data class DiagnosticStat(val statBits: String, val numBits: Int, val asNumber: Int)

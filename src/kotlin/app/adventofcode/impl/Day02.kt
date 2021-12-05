@@ -8,7 +8,7 @@ class Day02(filename: String) : Puzzle(filename) {
     override fun solveFirst(): String? {
         val commands = input
             .map { it.split(" ") }
-            .map { it[0].to(it[1].toInt()) }
+            .map { it[0] to it[1].toInt() }
 
         var depth = 0;
         var position = 0;
@@ -17,7 +17,7 @@ class Day02(filename: String) : Puzzle(filename) {
                 "up" -> depth -= amount
                 "down" -> depth += amount
                 "forward" -> position += amount
-                else -> Helper.debugMsg("Unknown direction ${direction}")
+                else -> Helper.debugMsg("Unknown direction $direction")
             }
         }
 
@@ -28,7 +28,7 @@ class Day02(filename: String) : Puzzle(filename) {
     override fun solveSecond(): String? {
         val commands = input
             .map { it.split(" ") }
-            .map { it[0].to(it[1].toInt()) }
+            .map { it[0] to it[1].toInt() }
 
         var depth = 0;
         var position = 0;
@@ -42,7 +42,7 @@ class Day02(filename: String) : Puzzle(filename) {
                     position += amount
                     depth += aim * amount
                 }
-                else -> Helper.debugMsg("Unknown direction ${direction}")
+                else -> Helper.debugMsg("Unknown direction $direction")
             }
         }
 

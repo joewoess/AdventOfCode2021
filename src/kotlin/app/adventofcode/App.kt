@@ -34,8 +34,8 @@ object Helper {
         println("|  Day  |         1st |         2nd |")
     }
 
-    /** Prints a message only if the global variable IsDebug is set */    
-    fun debugMsg(msg : String) {
+    /** Prints a message only if the global variable IsDebug is set */
+    fun debugMsg(msg: String) {
         if (IsDebug) {
             println(msg)
         }
@@ -47,7 +47,7 @@ object Helper {
     }
 
     /** Find all Implementations of puzzles */
-    public fun getImplementationClasses(): List<Puzzle> {
+    fun getImplementationClasses(): List<Puzzle> {
         var classes = mutableListOf<Puzzle>()
         val puzzlesFiles = Paths.get(if (IsTest) TEST_INPUT_PATH else INPUT_PATH).toFile().walk().sorted()
             .filter { it.name.endsWith(".txt") }
@@ -77,15 +77,13 @@ fun main(args: Array<String>) {
     Helper.debugMsg("IsTest: ${Helper.IsTest}")
     Helper.debugMsg("IsDebug: ${Helper.IsDebug}")
 
-    // debug show working directory
-    Helper.debugMsg(System.getProperty("user.dir"))
     // debug show current dir
     Helper.debugMsg(File("./").absolutePath)
 
     val implementations = Helper.getImplementationClasses()
     Helper.debugMsg("Implementations found: ${implementations.size}")
 
-    if(args.contains("--last")) {
+    if (args.contains("--last")) {
         println("Only show last entry (cmd arg --last)")
         Helper.printResultHeader()
         implementations.last().let {
@@ -95,23 +93,17 @@ fun main(args: Array<String>) {
         return
     }
     val numberArgs = args.sorted().filter { !it.startsWith("--") }.map { it.toIntOrNull() ?: 0 }.filter { it != 0 }
-    if (numberArgs.size > 0) {
-        println("Only show entries nr ${numberArgs}")
+    if (numberArgs.isNotEmpty()) {
+        println("Only show entries nr $numberArgs")
         Helper.printResultHeader()
-        numberArgs.forEach {
-            if (it in 1..25) {
-                implementations[it - 1].let {
-                    Helper.printPuzzleSolution(it)
-                }
-            }
+        numberArgs.filter { it in 1..25 }.forEach {
+            implementations[it - 1].let { puzzle -> Helper.printPuzzleSolution(puzzle) }
         }
         Helper.printSeparator()
         return
     }
 
     Helper.printResultHeader()
-    implementations.forEach {
-        Helper.printPuzzleSolution(it)
-    }
+    implementations.forEach { Helper.printPuzzleSolution(it) }
     Helper.printSeparator()
 }
