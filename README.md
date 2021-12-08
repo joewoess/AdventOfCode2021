@@ -16,7 +16,7 @@ All implemented solutions will be linked in the [Challenges table](##Challenges)
 |  3  | [Binary Diagnostic](https://adventofcode.com/2021/day/3) | [Csharp](src/csharp/impl/Day03.cs) | FSharp | [Kotlin](src/kotlin/app/adventofcode/impl/Day03.kt) | Rust | Python
 |  4  | [Giant Squid](https://adventofcode.com/2021/day/4) | [Csharp](src/csharp/impl/Day04.cs) | FSharp | Kotlin | Rust | Python
 |  5  | [Hydrothermal Venture](https://adventofcode.com/2021/day/5) | [Csharp](src/csharp/impl/Day05.cs) | FSharp | Kotlin | Rust | Python
-|  6  | [Lanternfish](https://adventofcode.com/2021/day/6) | Csharp | FSharp | Kotlin | Rust | Python
+|  6  | [Lanternfish](https://adventofcode.com/2021/day/6) | [Csharp](src/csharp/impl/Day06.cs) | [FSharp](src/fsharp/impl/Day06.fs) | [Kotlin](src/kotlin/app/adventofcode/impl/Day06.kt) | Rust | Python
 |  7  | [The Treachery of Whales](https://adventofcode.com/2021/day/7) | [Csharp](src/csharp/impl/Day07.cs) | FSharp | Kotlin | Rust | Python
 |  8  | [Seven Segment Search](https://adventofcode.com/2021/day/8) | [Csharp](src/csharp/impl/Day08.cs) | FSharp | Kotlin | Rust | Python
 |  9  | [Challenge 09](https://adventofcode.com/2021/day/9) | Csharp | FSharp | Kotlin | Rust | Python

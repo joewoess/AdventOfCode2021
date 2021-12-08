@@ -15,6 +15,7 @@
     <Compile Include="helper\Reflection.fs" />
     <Compile Include="impl\Day01.fs" />
     <Compile Include="impl\Day02.fs" />
+    <Compile Include="impl\Day06.fs" />
     <!-- Needs to be last -->
     <Compile Include="Program.fs" />
   </ItemGroup>
