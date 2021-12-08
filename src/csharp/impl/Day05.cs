@@ -37,7 +37,7 @@ public class Day05 : IPuzzle
         }
 
         var grid = PointDictToGrid(map, _defaultMapper);
-        DebugMsg($"Map is:\n{AsPrintable(grid)}");
+        DebugMsg($"Map is:\n{GridAsPrintable(grid)}");
 
         return map.Values.Count(crosses => crosses >= 2).ToString();
     }
@@ -62,7 +62,7 @@ public class Day05 : IPuzzle
         }
 
         var grid = PointDictToGrid(map, _defaultMapper);
-        DebugMsg($"Map is:\n{AsPrintable(grid)}");
+        DebugMsg($"Map is:\n{GridAsPrintable(grid)}");
 
         return map.Values.Count(crosses => crosses >= 2).ToString();
     }

@@ -7,7 +7,6 @@ namespace csharp.impl;
 public class Day07 : IPuzzle
 {
     private readonly string[] _input;
-    private readonly Func<int, string> _defaultMapper = val => val == 0 ? "." : val.ToString();
 
     public Day07(string filename)
     {
@@ -25,7 +24,8 @@ public class Day07 : IPuzzle
         var max = input.Max();
 
         var minOffset = int.MaxValue;
-        for (int i = min; i <= max; i++) {
+        for (int i = min; i <= max; i++)
+        {
             minOffset = Math.Min(minOffset, input.Sum(pos => Math.Abs(i - pos)));
         }
 
@@ -43,7 +43,8 @@ public class Day07 : IPuzzle
         var max = input.Max();
 
         var minOffset = int.MaxValue;
-        for (int i = min; i <= max; i++) {
+        for (int i = min; i <= max; i++)
+        {
             minOffset = Math.Min(minOffset, input.Sum(pos => Enumerable.Range(0, Math.Abs(i - pos) + 1).Sum()));
         }
 

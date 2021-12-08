@@ -62,8 +62,8 @@ Written in C# 10 / .NET 6";
     {
         return Convert.ToInt32(stat, 2);
     }
-    
-    
+
+
     /** Returns an enumerable of points between from and to going preferring to go horizontal then diagonal then vertical */
     public static IEnumerable<Point> Walk(Point from, Point to)
     {
@@ -120,7 +120,7 @@ Written in C# 10 / .NET 6";
     }
 
     /** Converts a generic multidimensional array to a printable string */
-    public static string AsPrintable<TGrid>(TGrid[,] grid, Func<TGrid, string>? mapper = null, string? separator = null, int? padLength = null,
+    public static string GridAsPrintable<TGrid>(TGrid[,] grid, Func<TGrid, string>? mapper = null, string? separator = null, int? padLength = null,
         string defaultWithoutMapper = "", string? lineSeparator = "\n")
     {
         var result = new StringBuilder();
