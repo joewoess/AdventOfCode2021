@@ -19,7 +19,7 @@ All implemented solutions will be linked in the [Challenges table](##Challenges)
 |  6  | [Lanternfish](https://adventofcode.com/2021/day/6) | [Csharp](src/csharp/impl/Day06.cs) | [FSharp](src/fsharp/impl/Day06.fs) | [Kotlin](src/kotlin/app/adventofcode/impl/Day06.kt) | Rust | Python
 |  7  | [The Treachery of Whales](https://adventofcode.com/2021/day/7) | [Csharp](src/csharp/impl/Day07.cs) | FSharp | Kotlin | Rust | Python
 |  8  | [Seven Segment Search](https://adventofcode.com/2021/day/8) | [Csharp](src/csharp/impl/Day08.cs) | FSharp | Kotlin | Rust | Python
-|  9  | [Challenge 09](https://adventofcode.com/2021/day/9) | Csharp | FSharp | Kotlin | Rust | Python
+|  9  | [Smoke Basin](https://adventofcode.com/2021/day/9) | [Csharp](src/csharp/impl/Day09.cs) | FSharp | Kotlin | Rust | Python
 | 10  | [Challenge 10](https://adventofcode.com/2021/day/10) | Csharp | FSharp | Kotlin | Rust | Python
 | 11  | [Challenge 11](https://adventofcode.com/2021/day/11) | Csharp | FSharp | Kotlin | Rust | Python
 | 12  | [Challenge 12](https://adventofcode.com/2021/day/12) | Csharp | FSharp | Kotlin | Rust | Python
