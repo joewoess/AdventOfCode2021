@@ -123,17 +123,24 @@ Written in C# 10 / .NET 6";
     public static string GridAsPrintable<TGrid>(TGrid[,] grid, Func<TGrid, string>? mapper = null, string? separator = null, int? padLength = null,
         string defaultWithoutMapper = "", string? lineSeparator = "\n")
     {
+        return GridAsPrintable(grid.ToJaggedArray(), mapper, separator, padLength, defaultWithoutMapper, lineSeparator);
+    }
+
+    /** Converts a generic jagged array to a printable string */
+    public static string GridAsPrintable<TGrid>(TGrid[][] grid, Func<TGrid, string>? mapper = null, string? separator = null, int? padLength = null,
+        string defaultWithoutMapper = "", string? lineSeparator = "\n")
+    {
         var result = new StringBuilder();
         var line = new StringBuilder();
 
         mapper ??= t => t?.ToString() ?? defaultWithoutMapper;
 
-        for (var lineIdx = 0; lineIdx < grid.GetLength(0); lineIdx++)
+        for (var lineIdx = 0; lineIdx < grid.Length; lineIdx++)
         {
             line.Clear();
-            for (var posIdx = 0; posIdx < grid.GetLength(1); posIdx++)
+            for (var posIdx = 0; posIdx < grid[lineIdx].Length; posIdx++)
             {
-                var val = grid[lineIdx, posIdx];
+                var val = grid[lineIdx][posIdx];
                 var mapping = mapper?.Invoke(val) ?? defaultWithoutMapper;
                 line.Append(padLength is not null
                     ? mapping.PadLeft(padLength.Value)
@@ -147,6 +154,30 @@ Written in C# 10 / .NET 6";
         }
 
         return result.ToString();
+    }
+
+    public static T[][] ToJaggedArray<T>(this T[,] twoDimensionalArray)
+    {
+        var rowsFirstIndex = twoDimensionalArray.GetLowerBound(0);
+        var rowsLastIndex = twoDimensionalArray.GetUpperBound(0);
+        var numberOfRows = rowsLastIndex - rowsFirstIndex + 1;
+
+        var columnsFirstIndex = twoDimensionalArray.GetLowerBound(1);
+        var columnsLastIndex = twoDimensionalArray.GetUpperBound(1);
+        var numberOfColumns = columnsLastIndex - columnsFirstIndex + 1;
+
+        var jaggedArray = new T[numberOfRows][];
+        for (var lineIdx = 0; lineIdx < numberOfRows; lineIdx++)
+        {
+            jaggedArray[lineIdx] = new T[numberOfColumns];
+
+            for (var posIdx = 0; posIdx < numberOfColumns; posIdx++)
+            {
+                jaggedArray[lineIdx][posIdx] = twoDimensionalArray[lineIdx + rowsFirstIndex, posIdx + columnsFirstIndex];
+            }
+        }
+
+        return jaggedArray;
     }
 
     // Private methods
