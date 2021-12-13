@@ -22,8 +22,8 @@ All implemented solutions will be linked in the [Challenges table](##Challenges)
 |  9  | [Smoke Basin](https://adventofcode.com/2021/day/9) | [Csharp](src/csharp/impl/Day09.cs) | FSharp | Kotlin | Rust | Python
 | 10  | [Syntax Scoring](https://adventofcode.com/2021/day/10) | [Csharp](src/csharp/impl/Day10.cs) | FSharp | Kotlin | Rust | Python
 | 11  | [Dumbo Octopus](https://adventofcode.com/2021/day/11) | [Csharp](src/csharp/impl/Day11.cs) | FSharp | Kotlin | Rust | Python
-| 12  | [Challenge 12](https://adventofcode.com/2021/day/12) | Csharp | FSharp | Kotlin | Rust | Python
-| 13  | [Challenge 13](https://adventofcode.com/2021/day/13) | Csharp | FSharp | Kotlin | Rust | Python
+| 12  | [Passage Pathing](https://adventofcode.com/2021/day/12) | [Csharp](src/csharp/impl/Day12.cs) | FSharp | Kotlin | Rust | Python
+| 13  | [Transparent Origami](https://adventofcode.com/2021/day/13) | [Csharp](src/csharp/impl/Day13.cs) | FSharp | Kotlin | Rust | Python
 | 14  | [Challenge 14](https://adventofcode.com/2021/day/14) | Csharp | FSharp | Kotlin | Rust | Python
 | 15  | [Challenge 15](https://adventofcode.com/2021/day/15) | Csharp | FSharp | Kotlin | Rust | Python
 | 16  | [Challenge 16](https://adventofcode.com/2021/day/16) | Csharp | FSharp | Kotlin | Rust | Python
